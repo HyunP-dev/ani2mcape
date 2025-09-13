@@ -15,6 +15,7 @@ def to_concated_image(ani_raw_data: bytes):
         output_image.composite(current_image, 0, i * first_image.height)
     return output_image
 
+
 def save_zoomed_images(image: Image, filename_prefix: str):
     image.save(filename=filename_prefix+".png")
     with image.clone() as resize:
@@ -27,20 +28,23 @@ def save_zoomed_images(image: Image, filename_prefix: str):
         resize.scale(10*image.width, 10*image.height)
         resize.save(filename=filename_prefix+"_10x.png")
 
+
 @click.command()
 @click.argument("loaddir")
 @click.argument("savedir")
-def cli(loaddir, savedir):
+def run(loaddir, savedir):
     if not os.path.exists(savedir):
         os.mkdir(savedir)
 
     for entry in os.scandir(loaddir):
         if not entry.path.endswith(".ani"):
             continue
-        
+
         with open(entry.path, "rb") as f:
             image = to_concated_image(f.read())
-            save_zoomed_images(image, savedir + "/" + os.path.basename(entry.path)[:-4])
+            save_zoomed_images(image, savedir + "/" +
+                               os.path.basename(entry.path)[:-4])
+
 
 if __name__ == "__main__":
-    cli()
+    run()

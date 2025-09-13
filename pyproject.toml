@@ -12,6 +12,11 @@ dependencies = [
     "click (>=8.1.8,<9.0.0)"
 ]
 
+[project.scripts]
+ani2mcape = "ani2mcape.cli:run"
+
+[tool.poetry]
+packages = [{include = "ani2mcape", from = "src"}]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
