@@ -9,7 +9,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "win2xcur (>=0.1.2,<0.2.0)",
-    "click (>=8.1.8,<9.0.0)"
+    "click (>=8.1.8,<9.0.0)",
+    "dacite (>=1.9.2,<2.0.0)"
 ]
 
 [project.scripts]

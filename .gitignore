@@ -1,3 +1,6 @@
 *.ani
 *.png
+*.inf
+*.cape
 poetry.lock
+__pycache__
