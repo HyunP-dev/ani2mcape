@@ -10,11 +10,14 @@ requires-python = ">=3.12"
 dependencies = [
     "win2xcur (>=0.1.2,<0.2.0)",
     "click (>=8.1.8,<9.0.0)",
-    "dacite (>=1.9.2,<2.0.0)"
+    "dacite (>=1.9.2,<2.0.0)",
+    "pillow (>=11.3.0,<12.0.0)",
+    "tifffile (>=2025.9.9,<2026.0.0)",
+    "imagecodecs (>=2025.8.2,<2026.0.0)"
 ]
 
 [project.scripts]
-ani2mcape = "ani2mcape.cli:run"
+ani2mcape = "ani2mcape.cli:make"
 
 [tool.poetry]
 packages = [{include = "ani2mcape", from = "src"}]
