@@ -2,12 +2,8 @@
 
 A tool to convert ani cursor files to [mousescape](https://github.com/alexzielenski/Mousecape) cursor plist which can be used to set a mouse cursor image on macOS.
 
-## installation
-```shell
-python -m pip install git+https://github.com/HyunP-dev/ani2mcape.git
-```
-
 ## usage
 ```shell
-ani2mcape --help
+brew install freetype imagemagick
+uvx --from git+https://github.com/HyunP-dev/ani2mcape ani2mcape --help
 ```
