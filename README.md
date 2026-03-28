@@ -4,5 +4,6 @@ A tool to convert ani cursor files to [mousescape](https://github.com/alexzielen
 
 ## usage
 ```shell
-uvx --from git+https://github.com/HyunP-dev/ani2mcape ani2mcape --help
+uv tool install --from git+https://github.com/HyunP-dev/ani2mcape ani2mcape
+ani2mcape --help
 ```
